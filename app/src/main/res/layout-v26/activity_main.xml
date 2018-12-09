@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/background_light"
+    tools:context=".activity.MainActivity">
+
+
+    <LinearLayout
+        android:id="@+id/email_login_form"
+        android:layout_width="148dp"
+        android:layout_height="454dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="48dp"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/preview"
+            android:layout_width="match_parent"
+            android:layout_height="12dp"
+            android:layout_weight="1"
+            android:background="@drawable/text_style"
+            android:ellipsize="start"
+            android:gravity="center"
+            android:hapticFeedbackEnabled="false"
+            android:text="@string/add_users"
+            android:textColor="@color/colorAccent"
+            android:textSize="18sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+        </LinearLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal">
+
+            <AutoCompleteTextView
+                android:id="@+id/email"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@drawable/edit_text_style"
+                android:gravity="center_vertical"
+                android:hint="@string/login_hint"
+                android:inputType="textEmailAddress"
+                android:maxLines="1"
+                android:paddingLeft="8dp"
+                android:singleLine="true" />
+
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <AutoCompleteTextView
+                android:id="@+id/name"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@drawable/edit_text_style"
+                android:hint="@string/name_hint"
+                android:inputType="textEmailAddress"
+                android:maxLines="1"
+                android:paddingLeft="8dp"
+                android:singleLine="true" />
+
+        </android.support.design.widget.TextInputLayout>
+
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <AutoCompleteTextView
+                android:id="@+id/lastname"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@drawable/edit_text_style"
+                android:hint="@string/last_name_hint"
+                android:inputType="textEmailAddress"
+                android:maxLines="1"
+                android:paddingLeft="8dp"
+                android:singleLine="true" />
+
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_weight="1">
+
+            <AutoCompleteTextView
+                android:id="@+id/age"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@drawable/edit_text_style"
+                android:hint="@string/age_hint"
+                android:inputType="textEmailAddress"
+                android:maxLines="1"
+                android:paddingLeft="8dp"
+                android:singleLine="true" />
+
+        </android.support.design.widget.TextInputLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="38dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/add"
+                style="@android:style/Widget.Material.Light.Button"
+                android:layout_width="match_parent"
+                android:layout_height="37dp"
+                android:layout_marginTop="16dp"
+                android:background="#9da5cf"
+                android:text="@string/add_user"
+                android:textColor="#e8dcdc"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="28dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/random"
+                style="@android:style/Widget.Material.Light.Button"
+                android:layout_width="match_parent"
+                android:layout_height="38dp"
+                android:background="#ae7a7a"
+                android:text="@string/generate_user"
+                android:textColor="#ffffff"
+                tools:layout_editor_absoluteX="57dp"
+                tools:layout_editor_absoluteY="397dp" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/clear"
+            android:layout_width="158dp"
+            android:layout_height="37dp"
+            android:layout_marginEnd="8dp"
+            android:background="@color/colorAccent"
+            android:text="@string/clear_all"
+            android:textColor="#ffffff"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="199dp"
+        android:layout_height="497dp"
+        android:layout_marginTop="48dp"
+        android:layout_marginEnd="8dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <EditText
+            android:id="@+id/search"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="@string/search_hint"
+            android:inputType="textPersonName" />
+
+        <ListView
+            android:id="@+id/listview"
+            android:layout_width="match_parent"
+            android:layout_height="454dp"
+            android:background="@drawable/list_style" />
+
+    </LinearLayout>
+
+
+</android.support.constraint.ConstraintLayout>
